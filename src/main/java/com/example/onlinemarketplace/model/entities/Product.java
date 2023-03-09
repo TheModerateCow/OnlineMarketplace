@@ -44,6 +44,9 @@ public class Product implements Serializable {
     @OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "product")
     private Set<OrderProduct> orderProducts = new HashSet<>();
 
+    @OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "product")
+    private Set<CartProduct> cartProducts = new HashSet<>();
+
     // Timestamps
     @CreatedDate
     private LocalDateTime createdAt;

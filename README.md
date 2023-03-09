@@ -1,7 +1,5 @@
 # Project Idea: Online Marketplace
 
----
-
 ## Description:
 Create an online marketplace where users can buy and sell products. The application will allow users to search for products, view product details, add products to cart, checkout, and make payments.
 

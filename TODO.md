@@ -9,6 +9,6 @@
 - [x] Create "Order" model with "OrderLine" entity (Using 2 @OneToMany)
 
 ## Task for 10/03/23 
-- [ ] Create Cart model
+- [x] Create Cart model (Maybe a @ManyToMany relationship to Product)
 - [ ] Add search for products by category, name, and price. (BackEnd)
 - [ ] Read through Section 7.3.3 of "_Java Persistence with Hibernate_" and check cascades.
