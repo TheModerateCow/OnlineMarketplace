@@ -30,3 +30,7 @@ Create an online marketplace where users can buy and sell products. The applicat
 - [ ] Spring Data JPA for data access.
 - [ ] Integration with payment gateways like PayPal, Stripe, etc.
 
+## Database Model
+As of 10/03/23:
+![Model Diagram](images/Model%20Diagram%20at%202023-03-10_00-25.png)
+

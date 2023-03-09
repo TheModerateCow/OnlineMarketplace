@@ -8,6 +8,7 @@ import lombok.Setter;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
@@ -18,7 +19,7 @@ import java.util.Set;
 @AllArgsConstructor
 @Getter
 @Setter
-public class Category {
+public class Category implements Serializable {
 
     @Id
     @GeneratedValue(generator = "Cat_Gen", strategy = GenerationType.SEQUENCE)

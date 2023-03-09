@@ -1,0 +1,1 @@
+The implementation of @ManyToMany using an intermediate entity and 2 @OneToMany Relationships was from **"Java Persistence with Hibernate"**.

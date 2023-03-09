@@ -1,5 +1,6 @@
 package com.example.onlinemarketplace.model.entities;
 
+import com.example.onlinemarketplace.model.entities.OrderProduct.OrderProduct;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -8,8 +9,11 @@ import lombok.Setter;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "product")
@@ -17,7 +21,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Getter
 @Setter
-public class Product {
+public class Product implements Serializable {
     @Id
     @GeneratedValue(generator = "Product_Gen", strategy = GenerationType.IDENTITY)
     @SequenceGenerator(name = "Product_Gen", sequenceName = "Product_Gen")
@@ -36,6 +40,9 @@ public class Product {
     // Relationships
     @ManyToOne(fetch = FetchType.LAZY)
     private Category category;
+
+    @OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "product")
+    private Set<OrderProduct> orderProducts = new HashSet<>();
 
     // Timestamps
     @CreatedDate
