@@ -12,6 +12,7 @@
 - [x] Create Cart model (Maybe a @ManyToMany relationship to Product)
 - [x] Add Category Get Request for summarized and complete
 - [x] Implement Category DTOs for custom queries using JPQL
+- [x] Fixed @ManyToOne column names
 
 ## Task for 11/03/23
 - [ ] Read through Section 7.3.3 of "_Java Persistence with Hibernate_" and check cascades

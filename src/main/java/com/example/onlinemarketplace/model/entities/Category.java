@@ -35,6 +35,7 @@ public class Category implements Serializable {
 
     // Relationships
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "parent_category_id")
     private Category parentCategory;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "parentCategory")
