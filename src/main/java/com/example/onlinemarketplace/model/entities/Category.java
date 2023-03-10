@@ -40,6 +40,9 @@ public class Category implements Serializable {
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "parentCategory")
     private Set<Category> childCategories = new HashSet<>();
 
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "category")
+    private Set<Product> products = new HashSet<>();
+
     // Timestamps
     @CreatedDate
     private LocalDateTime createdAt;
