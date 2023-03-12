@@ -14,7 +14,9 @@
 - [x] Implement Category DTOs for custom queries using JPQL
 - [x] Fixed @ManyToOne column names
 
-## Task for 11/03/23
-- [ ] Read through Section 7.3.3 of "_Java Persistence with Hibernate_" and check cascades
-- [ ] Add search for products by category, name, and price (BackEnd)
+## Task for 12/03/23
 - [ ] Complete JPQL query for findAllCategoryDtos()
+- [x] Complete JPQL query for all methods in ProductRepository.
+- [x] Fix JPQL query for @Query in ProductRepository.
+- [ ] Read through Section 7.3.3 of "_Java Persistence with Hibernate_" and check cascades
+- [x] Add search for products by category, name, and price (BackEnd)
