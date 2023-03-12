@@ -1,7 +1,6 @@
 package com.example.onlinemarketplace.service;
 
 import com.example.onlinemarketplace.model.dtos.ProductDto;
-import com.example.onlinemarketplace.model.entities.Product;
 import com.example.onlinemarketplace.model.repository.ProductRepository;
 import org.springframework.stereotype.Service;
 

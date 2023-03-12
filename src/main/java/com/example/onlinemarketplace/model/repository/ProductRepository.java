@@ -1,12 +1,10 @@
 package com.example.onlinemarketplace.model.repository;
 
 import com.example.onlinemarketplace.model.dtos.ProductDto;
-import com.example.onlinemarketplace.model.entities.Category;
 import com.example.onlinemarketplace.model.entities.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import javax.naming.Name;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
