@@ -19,8 +19,9 @@
 - [x] Complete GET Request for /categories
 - [x] Complete JPQL query for all methods in ProductRepository.
 - [x] Fix JPQL query for @Query in ProductRepository.
-- [ ] Read through Section 7.3.3 of "_Java Persistence with Hibernate_" and check cascades
 - [x] Add search for products by category, name, and price (BackEnd)
 
 ## Task for 13/03/23
 - [ ] Create POST request for Products
+- [ ] Read through Section 7.3.3 of "_Java Persistence with Hibernate_" and check cascades
+- [ ] Start on Frontend (Probably use NextJS)

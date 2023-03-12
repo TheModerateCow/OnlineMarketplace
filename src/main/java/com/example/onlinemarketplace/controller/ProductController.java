@@ -1,8 +1,6 @@
 package com.example.onlinemarketplace.controller;
 
 import com.example.onlinemarketplace.model.dtos.ProductDto;
-import com.example.onlinemarketplace.model.entities.Product;
-import com.example.onlinemarketplace.model.repository.ProductRepository;
 import com.example.onlinemarketplace.service.ProductService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +13,7 @@ import java.util.Optional;
 
 @Controller
 @RequestMapping(path = "v1/api", produces = "application/json")
-//@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin(origins = "http://localhost:8080")
 public class ProductController {
 
     private final ProductService productService;

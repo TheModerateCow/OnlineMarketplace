@@ -14,30 +14,30 @@ import java.util.List;
 @EqualsAndHashCode
 @ToString
 public class CategoryDto {
-    private Long id;
+    private Long category_id;
 
-    private String name;
+    private String category_name;
 
-    private String description;
+    private String category_description;
 
-    private LocalDateTime lastModifiedAt;
+    private LocalDateTime last_modified_at;
 
-    private LocalDateTime createdAt;
+    private LocalDateTime created_at;
 
-    private ParentCategory parentCategory;
+    private ParentCategory parent_category;
 
     private List<Product> products = new ArrayList<>();
 
     public CategoryDto(Long id, String name, String description, LocalDateTime lastModifiedAt, LocalDateTime createdAt) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-        this.lastModifiedAt = lastModifiedAt;
-        this.createdAt = createdAt;
+        this.category_id = id;
+        this.category_name = name;
+        this.category_description = description;
+        this.last_modified_at = lastModifiedAt;
+        this.created_at = createdAt;
     }
 
     public void addParentCategory(Long id, String name){
-        this.parentCategory = new ParentCategory(id, name);
+        this.parent_category = new ParentCategory(id, name);
     }
 
     @Getter
@@ -45,9 +45,9 @@ public class CategoryDto {
     @EqualsAndHashCode
     @ToString
     public class ParentCategory {
-        private Long id;
+        private Long parent_category_id;
 
-        private String name;
+        private String parent_category_name;
     }
 
     @Getter
@@ -55,9 +55,9 @@ public class CategoryDto {
     @EqualsAndHashCode
     @ToString
     public static class Product {
-        private Long id;
+        private Long product_id;
 
-        private String name;
+        private String product_name;
 
     }
 }

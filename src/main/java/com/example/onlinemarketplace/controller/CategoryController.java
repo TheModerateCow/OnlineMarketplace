@@ -1,6 +1,5 @@
 package com.example.onlinemarketplace.controller;
 
-import com.example.onlinemarketplace.model.entities.Category;
 import com.example.onlinemarketplace.service.CategoryService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,7 +23,7 @@ public class CategoryController {
     }
 
     @GetMapping(path = "/categories")
-    public ResponseEntity<List<?>> getAllSummarisedCategories(@RequestParam(defaultValue = "false") Boolean summarise) {
+    public ResponseEntity<List<?>> getAllSummarisedCategories(@RequestParam(defaultValue = "true") Boolean summarise) {
         return new ResponseEntity<>(categoryService.getCategories(summarise), HttpStatus.OK);
     }
 }
