@@ -24,6 +24,6 @@ public class Cart implements Serializable {
     private Long id;
 
     // Relationship
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "cart")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "cart")
     private Set<CartProduct> cartProducts = new HashSet<>();
 }

@@ -5,6 +5,7 @@ import com.example.onlinemarketplace.model.entities.Category;
 import com.example.onlinemarketplace.model.repository.custom.CategoryRepositoryCustom;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -15,6 +16,6 @@ public interface CategoryRepository extends JpaRepository<Category, Long>, Categ
      * @see SummarisedCategoryDto
      * @return a List of SummarisedCategoryDto
      */
-    @Query("SELECT new com.example.onlinemarketplace.model.dtos.SummarisedCategoryDto(c.name, c.description, c.parentCategory) FROM Category c")
+    @Query("SELECT new com.example.onlinemarketplace.model.dtos.SummarisedCategoryDto(c.name, c.description) FROM Category c")
     List<SummarisedCategoryDto> findAllSummarisedCategoryDtos();
 }

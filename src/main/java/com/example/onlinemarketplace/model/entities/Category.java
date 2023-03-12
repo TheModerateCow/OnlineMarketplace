@@ -38,10 +38,10 @@ public class Category implements Serializable {
     @JoinColumn(name = "parent_category_id")
     private Category parentCategory;
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "parentCategory")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "parentCategory")
     private Set<Category> childCategories = new HashSet<>();
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "category")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "category")
     private Set<Product> products = new HashSet<>();
 
     // Timestamps

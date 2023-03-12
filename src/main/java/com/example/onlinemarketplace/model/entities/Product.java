@@ -42,10 +42,10 @@ public class Product implements Serializable {
     @JoinColumn(name = "category_id", nullable = false)
     private Category category;
 
-    @OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "product")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "product")
     private Set<OrderProduct> orderProducts = new HashSet<>();
 
-    @OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "product")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "product")
     private Set<CartProduct> cartProducts = new HashSet<>();
 
     // Timestamps

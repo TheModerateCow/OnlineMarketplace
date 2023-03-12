@@ -14,6 +14,4 @@ public class SummarisedCategoryDto {
     private String name;
 
     private String description;
-
-    private Category parentCategory;
 }

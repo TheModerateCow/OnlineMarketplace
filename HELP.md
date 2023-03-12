@@ -37,8 +37,9 @@ The following guides illustrate how to use some features concretely:
 These additional references should also help you:
 
 * [Gradle Build Scans – insights for your project's build](https://scans.gradle.com#gradle)
-
+<br></br>
 * [How to use JPQL Joins](https://www.baeldung.com/jpa-join-types)
 * [RequestParams vs PathVariable](https://www.baeldung.com/spring-requestparam-vs-pathvariable)
-* [How to use RequestParams](https://www.baeldung.com/spring-request-param)\
-* [ebooks](https://en.wikibooks.org/wiki/Java_Persistence)
+* [How to use RequestParams](https://www.baeldung.com/spring-request-param)
+* [Wiki for JPA](https://en.wikibooks.org/wiki/Java_Persistence)
+* [Field Dependency Injection Considered Harmful](https://www.vojtechruzicka.com/field-dependency-injection-considered-harmful/)

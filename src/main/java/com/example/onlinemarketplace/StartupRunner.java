@@ -4,6 +4,7 @@ import com.example.onlinemarketplace.model.repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 @Component
 public class StartupRunner implements CommandLineRunner {
@@ -14,9 +15,10 @@ public class StartupRunner implements CommandLineRunner {
     }
 
     @Override
+    @Transactional
     public void run(String... args) throws Exception {
         System.out.println("------------Start------------");
-        System.out.println(categoryRepository.findAllCategoryDtos());
+//        System.out.println(categoryRepository.findAllCategoryDtos());
         System.out.println("------------End------------");
 
     }

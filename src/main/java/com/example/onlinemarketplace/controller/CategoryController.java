@@ -1,9 +1,16 @@
 package com.example.onlinemarketplace.controller;
 
+import com.example.onlinemarketplace.model.entities.Category;
 import com.example.onlinemarketplace.service.CategoryService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.List;
 
 @Controller
 @RequestMapping(path = "v1/api", produces = "application/json")
@@ -16,6 +23,8 @@ public class CategoryController {
         this.categoryService = categoryService;
     }
 
-//    @GetMapping(path = "")
-//    public ResponseEntity<List<Category>> getAll
+    @GetMapping(path = "/categories")
+    public ResponseEntity<List<?>> getAllSummarisedCategories(@RequestParam(defaultValue = "false") Boolean summarise) {
+        return new ResponseEntity<>(categoryService.getCategories(summarise), HttpStatus.OK);
+    }
 }

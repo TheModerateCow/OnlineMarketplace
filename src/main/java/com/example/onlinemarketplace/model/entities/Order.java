@@ -28,7 +28,7 @@ public class Order implements Serializable {
     private Long id;
 
     // Relationships
-    @OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "order")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "order")
     private Set<OrderProduct> orderProducts = new HashSet<>();
 
     // Timestamp

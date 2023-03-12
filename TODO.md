@@ -15,7 +15,8 @@
 - [x] Fixed @ManyToOne column names
 
 ## Task for 12/03/23
-- [ ] Complete JPQL query for findAllCategoryDtos()
+- [x] Complete JPQL query for findAllCategoryDtos()
+- [x] Complete GET Request for /categories
 - [x] Complete JPQL query for all methods in ProductRepository.
 - [x] Fix JPQL query for @Query in ProductRepository.
 - [ ] Read through Section 7.3.3 of "_Java Persistence with Hibernate_" and check cascades

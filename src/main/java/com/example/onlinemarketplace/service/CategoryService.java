@@ -1,10 +1,13 @@
 package com.example.onlinemarketplace.service;
 
+import com.example.onlinemarketplace.model.dtos.CategoryDto;
+import com.example.onlinemarketplace.model.dtos.SummarisedCategoryDto;
 import com.example.onlinemarketplace.model.entities.Category;
 import com.example.onlinemarketplace.model.repository.CategoryRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 
 @Service
 public class CategoryService {
@@ -22,8 +25,9 @@ public class CategoryService {
      *
      * @return a List of summarised category objects, if any (or an empty list)
      */
-    public List<Category> getSummarisedCategories() {
-        return categoryRepository.findAll();
+    @Deprecated
+    public List<SummarisedCategoryDto> getSummarisedCategories() {
+        return categoryRepository.findAllSummarisedCategoryDtos();
     }
 
     /**
@@ -31,7 +35,10 @@ public class CategoryService {
      *
      * @return a List of category objects, if any (or an empty list)
      */
-    public List<Category> getCategories() {
-        return categoryRepository.findAll();
+    public List<?> getCategories(Boolean summarise) {
+        if (summarise) {
+            return categoryRepository.findAllSummarisedCategoryDtos();
+        }
+        return categoryRepository.findAllCategoryDtos();
     }
 }
