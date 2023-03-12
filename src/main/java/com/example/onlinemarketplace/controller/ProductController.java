@@ -2,6 +2,7 @@ package com.example.onlinemarketplace.controller;
 
 import com.example.onlinemarketplace.model.dtos.ProductDto;
 import com.example.onlinemarketplace.model.entities.Product;
+import com.example.onlinemarketplace.model.repository.ProductRepository;
 import com.example.onlinemarketplace.service.ProductService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -33,6 +34,7 @@ public class ProductController {
     public ResponseEntity<ProductDto> getProductByName(@PathVariable String name) {
         Optional<ProductDto> optionalProduct = productService.getProductByName(name);
 
+        // Note to self: Do not shorten this if block. Make it readable.
         if (optionalProduct.isPresent()) {
             return new ResponseEntity<>(optionalProduct.get(), HttpStatus.OK);
         }
@@ -50,6 +52,7 @@ public class ProductController {
     public ResponseEntity<ProductDto> getProductById(@PathVariable("id") Long id) {
         Optional<ProductDto> optionalProduct = productService.getProductById(id);
 
+        // Note to self: Do not shorten this if block. Make it readable.
         if (optionalProduct.isPresent()) {
             return new ResponseEntity<>(optionalProduct.get(), HttpStatus.OK);
         }
@@ -84,12 +87,12 @@ public class ProductController {
     /**
      * Will return all Products.
      * <p>
-     * ToDo: Create a paginable list of Products
+     * ToDo: Create a paginable list of Products.
      *
      * @return a list of ProductDto
      */
     @GetMapping(path = "/products")
-    public ResponseEntity<List<Product>> getAllProducts() {
-        return null;
+    public ResponseEntity<List<ProductDto>> getAllProducts() {
+        return new ResponseEntity<>(productService.getAllProducts(), HttpStatus.OK);
     }
 }

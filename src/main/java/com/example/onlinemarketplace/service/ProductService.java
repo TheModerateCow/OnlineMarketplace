@@ -32,4 +32,8 @@ public class ProductService {
     public List<ProductDto> getProductsByPrice(BigDecimal price) {
         return productRepository.findProductsByPrice(price);
     }
+
+    public List<ProductDto> getAllProducts() {
+        return productRepository.findAllProducts();
+    }
 }
