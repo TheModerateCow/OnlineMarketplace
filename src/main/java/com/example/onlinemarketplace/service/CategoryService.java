@@ -1,13 +1,10 @@
 package com.example.onlinemarketplace.service;
 
-import com.example.onlinemarketplace.model.dtos.CategoryDto;
 import com.example.onlinemarketplace.model.dtos.SummarisedCategoryDto;
-import com.example.onlinemarketplace.model.entities.Category;
 import com.example.onlinemarketplace.model.repository.CategoryRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Objects;
 
 @Service
 public class CategoryService {

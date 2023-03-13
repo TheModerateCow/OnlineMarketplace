@@ -21,7 +21,7 @@ Create an online marketplace where users can buy and sell products. The applicat
 ## Technologies:
 
 - [x] Spring Boot for the back-end.
-- [ ] ReactJS for building the UI.
+- [ ] Flutter for building the UI.
 - [ ] Bootstrap or any front-end framework for responsive UI.
 - [ ] PostgreSQL for the database.
 - [ ] Spring Security for authentication and authorization.
@@ -30,5 +30,5 @@ Create an online marketplace where users can buy and sell products. The applicat
 
 ## Database Model
 As of 10/03/23:
-![Model Diagram](images/Model%20Diagram%20at%202023-03-10_00-25.png)
+![Model Diagram](images/2023-03-13_22-33.png)
 

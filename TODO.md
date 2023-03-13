@@ -24,4 +24,4 @@
 ## Task for 13/03/23
 - [ ] Create POST request for Products
 - [ ] Read through Section 7.3.3 of "_Java Persistence with Hibernate_" and check cascades
-- [ ] Start on Frontend (Probably use NextJS)
+- [ ] Start on Frontend (Probably use Flutter)
