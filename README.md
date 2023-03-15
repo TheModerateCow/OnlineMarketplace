@@ -30,5 +30,5 @@ Create an online marketplace where users can buy and sell products. The applicat
 
 ## Database Model
 As of 10/03/23:
-![Model Diagram](images/2023-03-13_22-33.png)
+![Model Diagram](Backend/images/2023-03-13_22-33.png)
 
